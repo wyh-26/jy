@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: db, admin , user
+
+server:
+  port: 8000

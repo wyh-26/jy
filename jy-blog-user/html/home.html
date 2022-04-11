@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用 layui</title>
+    <link rel="stylesheet" href="../node_modules/layui/src/css/layui.css">
+    <style>
+        .shadow{
+            box-shadow:2px -2px 2px 2px #ccc;
+        }
+        *{
+            -webkit-touch-callout: none;
+
+            -webkit-user-select: none;
+
+            -moz-user-select: none;
+
+            -ms-user-select: none;
+
+            user-select: none;
+        }
+
+        .card{
+            box-shadow:2px -2px 3px 2px gainsboro;
+            /*margin: auto;*/
+            /*margin-top: 15px;*/
+        }
+        /*.user-info{*/
+        /*    */
+        /*    !*width: 90%;*!*/
+        /*    margin: auto;*/
+
+        /*}*/
+        /*.head{*/
+        /*    margin-top: 20px;*/
+        /*    margin: auto;*/
+        /*}*/
+        .center{
+            text-align: center;
+            align-items: center;
+            margin: auto;
+        }
+        .box-center{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+
+
+        .mabt{
+
+            padding-bottom: 8px;
+            padding-top: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .fmt-img{
+            background-repeat: no-repeat;
+            background-size: cover;
+            //width: 10px;
+            //height: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="layui-main " style="width: 100%; background-color: #FAFAFA" >
+
+
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <ul class="layui-nav" lay-filter="">
+                <li class="layui-nav-item layui-this">
+                    <a href="">
+                        <div></div>
+                        <div>首页</div>
+                    </a>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="./about.html" target="_blank">
+                        <div>
+                        </div>
+                        <div>
+                            关于
+                        </div>
+                    </a>
+                </li>
+<!--                <li class="layui-nav-item"><a href="">大数据</a></li>-->
+<!--                <li class="layui-nav-item">-->
+<!--                    <a href="javascript:;">解决方案</a>-->
+<!--                    <dl class="layui-nav-child"> &lt;!&ndash; 二级菜单 &ndash;&gt;-->
+<!--                        <dd><a href="">移动模块</a></dd>-->
+<!--                        <dd><a href="">后台模版</a></dd>-->
+<!--                        <dd><a href="">电商平台</a></dd>-->
+<!--                    </dl>-->
+<!--                </li>-->
+<!--                <li class="layui-nav-item"><a href="">社区</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space20">
+        <div class = "layui-col-md3" >
+            <div class="layui-row mabt" >
+                <div class="layui-card card">
+                    <div class="layui-card-body">
+                        <div class="layui-row mabt">
+                            <div class="layui-col-md12">
+                                <div id="user-head" class="center" style="width:100px; height: 100px; border-radius: 100%;  background-repeat: no-repeat;background-size: cover">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-row mabt">
+                            <div class="layui-col-md12">
+                                <div id = "user-name" style="text-align: center;font-family: 幼圆; font-weight: bolder;font-size: larger">
+<!--                                    大啊大老师-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-row mabt">
+                            <div class="layui-col-md12">
+                                <div id="user-talk" style="text-align: center; font-family: 幼圆" >
+<!--                                    做该做的事，在意改在意的人-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-row box-center" style="margin-bottom: 10px; height: 40px">
+                            <div class="layui-col-md3" >
+                                <div  class=" box-center" style="justify-content: center" >
+                                    <a class = "github-link" target="_blank">
+                                        <div  class=" fmt-img" style="width:20px;height:20px; background-image: url(../image/icon/github.png)"></div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <div  class="box-center " style="justify-content: center">
+                                    <a class = "gitee-link " target="_blank">
+                                        <div  class="fmt-img" id="user-gitee" style=" width:20px;height:20px;background-image: url(../image/icon/gitee.png)"></div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <div  class="box-center" style="justify-content: center">
+                                    <a class = "leetcode-link" target="_blank">
+                                        <div id="user-let" class="fmt-img" style="width:20px;height:20px;background-image: url(../image/icon/leetcode.png)"></div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <div  class="box-center" style="justify-content: center">
+                                    <a class = "email-link" target="_blank">
+                                        <div id="user-email" class="fmt-img " style="width:20px;height:20px;background-image: url(../image/icon/email.png)" ></div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row mabt">
+                <div class="layui-card card">
+                    <div class="layui-card-header">
+
+                        <div class="layui-row">
+                            <div class="layui-col-md1 layui-icon layui-icon-log"></div>
+                            <div class="layui-col-md10">最近文章</div>
+                        </div>
+                    </div>
+                    <div class="layui-card-body">
+                        <div id="last-article-view"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row mabt">
+                <div class="layui-card card">
+                    <div class="layui-card-header">站点统计</div>
+                    <div class="layui-card-body" >
+                        <div class="layui-carousel" id="flow-img">
+                            <div carousel-item>
+                                <div class="fmt-img" style="background-image: url(../image/0_e923ccb301.jpg)"></div>
+                                <div class="fmt-img" style="background-image: url(../image/chunwu.png)"></div>
+                                <div class="fmt-img" style="background-image: url(../image/img.png)"></div>
+                                <div class="fmt-img" style="background-image: url(../image/img_1.png)"></div>
+                                <div class="fmt-img" style="background-image: url(../image/img_2.png)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md8 ">
+            <div class="layui-row mabt">
+                <div class="layui-col-md12">
+                    <div class="layui-card card" id="article-table">
+                        <div class="layui-card-header" >文章总览</div>
+                        <div class="layui-card-body" style="height: 800px">
+                            <div class="layui-tab" lay-filter="demo" id="list">
+                                <ul class="layui-tab-title" id="article-tab-title" >
+                                    <li class="layui-this">技术文章</li>
+                                    <li>学习感悟</li>
+                                    <li>生活感悟</li>
+
+                                </ul>
+                                <div class="layui-tab-content" id="article-tab-content">
+                                    <div class="layui-tab-item layui-show">
+                                        <div></div>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <div></div>
+                                    </div>
+                                    <div class="layui-tab-item">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div id = "page"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- 你的 HTML 代码 -->
+
+<script src="../node_modules/layui/src/layui.js"></script>
+<script id="article-mode" type="text/html">
+    <ul class="layui-timeline">
+        {{#  layui.each(d, function(index, item){}}
+        <a style="height: 100%" href="articleContent.html#{{item.id}}" target="_blank">
+            <li class="layui-timeline-item "  style="height: 100px; ">
+            <i class="layui-icon layui-timeline-axis" >&#xe63f;</i>
+            <div class="layui-timeline-content layui-text" style="height:100%">
+<!--            <h3 class="layui-timeline-title" style="margin-bottom: 0px">-->
+<!--                {{ item.publish_date }}-->
+<!--            </h3>-->
+            <div class ="layui-row" >
+
+            <div class="layui-col-md2"  style="height:90px; width: 90px">
+                <div class="fmt-img center  cover{{index}}"  style="height:100%"></div>
+            </div>
+            <div class="layui-col-md7 box-center" style="height: 90px; margin-left: 2%">
+
+
+
+                <div class="layui-row mabt " style="width: 100%">
+                    <div class = "layui-row box-center" style="width: 100%" >
+                        <div class="  layui-col-md1 layui-icon layui-icon-date" style="align-items: center; font-family: 黑体;width: 8%"></div>
+                        <div class=" layui-col-md9"  style="width: 80%" >{{item.publish_date}}</div>
+                        <div class="layui-col-md2" style="width: 10%"></div>
+                    </div>
+                    <div class="" style="margin-top: 3%">{{item.title}}</div>
+                </div>
+
+            </div>
+            <div class="layui-col-md3"></div>
+            </div>
+            </div>
+            </li>
+        </a>
+
+        {{#});}}
+        {{#  if(d.length === 0){}}
+        无数据
+        {{#}}}
+    </ul>
+</script>
+<script id="last-article-mode" type="text/html">
+    <ul className="layui-timeline">
+        {{#  layui.each(d, function(index, item){}}
+            <a style="height: 100%" href="articleContent.html#{{item.id}}" target="_blank">
+            <li class="layui-timeline-item "  style="height: 50px; padding-bottom: 6px">
+            <i class="layui-icon layui-timeline-axis" >&#xe63f;</i>
+            <div class="layui-timeline-content layui-text" style="height:100%">
+            <!--            <h3 class="layui-timeline-title" style="margin-bottom: 0px">-->
+            <!--                {{ item.publish_date }}-->
+            <!--            </h3>-->
+            <div class ="layui-row" >
+
+            <div class="layui-col-md2"  style="height:45px; width: 45px">
+            <div class="fmt-img center  cover{{index}}"  style="height:100%"></div>
+            </div>
+            <div class="layui-col-md7 box-center" style="height: 45px; margin-left: 2%">
+
+
+
+            <div class="layui-row " style="width: 100%">
+            <div class = "layui-row box-center" style="width: 100%" >
+            <div class="  layui-col-md1 layui-icon layui-icon-date" style="align-items: center; font-family: 黑体;width: 20%"></div>
+            <div class=" layui-col-md9"  style="width: 80%; font-size: 2px" >{{item.publish_date}}</div>
+            <div class="layui-col-md2" style="width: 10%"></div>
+            </div>
+            <div class="layui-elip"  style=" font-size:5px; font-weight: bold">{{item.title}}</div>
+            </div>
+
+            </div>
+            <div class="layui-col-md3"></div>
+            </div>
+            </div>
+            </li>
+            </a>
+
+        {{#});}}
+        {{#  if(d.length === 0){}}
+            无数据
+        {{#}}}
+    </ul>
+</script>
+<script>
+    layui.use(['element', 'layer', 'util', 'laypage','flow','laytpl','carousel'], function () {
+        var element = layui.element
+            , layer = layui.layer
+            , util = layui.util
+            , laypage = layui.laypage
+            , flow = layui.flow
+            , laytpl = layui.laytpl
+            , carousel = layui.carousel
+            , $ = layui.$
+
+        // layer.msg('Hello World');
+
+        carousel.render({
+            elem: '#flow-img'
+            ,width: '100%' //设置容器宽度
+            // ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+            ,height: "400px"
+        });
+
+
+        //请求用户信息数据
+        var initUserInfo = function(){
+            $.get('http://localhost:8080/user-info/info', function(res){
+                //console.log(res);
+                var userHead = document.getElementById("user-head");
+                var userName = document.getElementById("user-name");
+                var userTalk = document.getElementById("user-talk");
+                var githubUrl = document.getElementsByClassName("github-link")[0];
+                var giteeUrl = document.getElementsByClassName("gitee-link")[0];
+                var emailUrl = document.getElementsByClassName("email-link")[0];
+                var leetCodeUrl = document.getElementsByClassName("leetcode-link")[0];
+
+                userHead.style.backgroundImage = "url(" + res.head + ")";
+                userName.innerHTML = res.userName;
+                userTalk.innerHTML = res.userTalk;
+                githubUrl.href = res.githubUrl;
+                giteeUrl.href = res.giteeUrl;
+                emailUrl.href = res.emailUrl;
+                leetCodeUrl.href = res.leetCodeUrl;
+            });
+        }
+
+
+        //请求文章信息
+        var initArticle = function(){
+            updateArticle(1 , "change-tab");
+        };
+
+        //渲染最近文章
+        var initLastArticle = function (){
+            $.get('http://localhost:8080/articles/article/' + "page/"+ 1,function(res) {
+
+                var viewDom = document.getElementById("last-article-view");
+
+                var articleData = res.records;
+                console.log("请求到的最近文章数据" + res);
+                var articleTpl = document.getElementById("last-article-mode").innerHTML;
+                //var articleView = document.getElementById("article-view");
+                laytpl(articleTpl).render(articleData, function (html) {
+                    viewDom.innerHTML = html;
+                });
+
+                for (var i = 0; i < articleData.length; i++) {
+                    var articleDom = viewDom.getElementsByClassName("cover" + i)[0];
+                    articleDom.style.backgroundImage = "url(" + articleData[i].cover + ')';
+                }
+            });
+        }
+
+        //点击页码，更新数据
+        var updateArticle = function(page , option){
+            var tabContentShow = document.getElementById("article-table").getElementsByClassName("layui-show")[0].getElementsByTagName("div")[0];
+            var tabTitleThis = document.getElementById("article-table").getElementsByClassName("layui-this")[0];
+            //注释掉下面这行，每次切换选项卡刷新数据
+            //只有当更新操作是切换选项卡时，才不更新
+            // if(tabContentShow.innerText != '' && option == "change-tab"){
+            //
+            //     return;
+            // }
+            $.get('http://localhost:8080/articles/article/type/'+ tabTitleThis.innerHTML + "/page/"+ page,function(res) {
+
+                var tabContentShow = document.getElementById("article-table").getElementsByClassName("layui-show")[0].getElementsByTagName("div")[0];
+
+                var articleData = res.records;
+                console.log(res)
+                var articleTpl = document.getElementById("article-mode").innerHTML;
+                //var articleView = document.getElementById("article-view");
+                laytpl(articleTpl).render(articleData, function (html) {
+                    tabContentShow.innerHTML = html;
+                });
+
+                for (var i = 0; i < articleData.length; i++) {
+
+                    var articleDom = tabContentShow.getElementsByClassName("cover" + i)[0];
+                    articleDom.style.backgroundImage = "url(" + articleData[i].cover + ')';
+                }
+
+                laypage.render({
+                    elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
+                    ,count: res.total //数据总数，从服务端得到
+                    ,limit: res.size
+                    ,curr: page
+
+                    ,jump: function(obj, first){
+                        //obj包含了当前分页的所有参数，比如：
+                        // console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                        // console.log(obj.limit); //得到每页显示的条数
+                        //
+                        // //首次不执行
+                        if(!first){
+                            //do something
+                            console.log("页码发生了变化")
+                            updateArticle(obj.curr , "change-page");
+
+                        }
+
+                    }
+
+                });
+
+
+            });
+        };
+
+        initLastArticle();
+        initUserInfo();
+        initArticle();
+        initUserInfo();
+
+        element.on('tab(demo)', function(data){
+            // console.log(this); //当前Tab标题所在的原始DOM元素
+            // console.log(data.index); //得到当前Tab的所在下标
+            // console.log(data.elem); //得到当前的Tab大容器
+            initArticle()
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        // flow.load({
+        //
+        //     elem: '#article-view' //指定列表容器
+        //     ,done: function(page, next){ //到达临界点（默认滚动触发），触发下一页
+        //         var lis = [];
+        //         var type = '';
+        //         //以jQuery的Ajax请求为例，请求下一页数据（注意：page是从2开始返回）
+        //         $.get('http://localhost:8080/articles/article-type/'+ type + '/page/'+page, function(res){
+        //             //假设你的列表返回在data集合中
+        //             console.log(res);
+        //             layui.each(res.records, function(index, item){
+        //                 lis.push('<li>'+ item.title +'</li>');
+        //             });
+        //
+        //             //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+        //             //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+        //             next(lis.join(''), page < res.pages);
+        //         });
+        //     }
+        // });
+
+
+
+
+    });
+</script>
+</body>
+</html>
